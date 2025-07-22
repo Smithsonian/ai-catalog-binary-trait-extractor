@@ -1,0 +1,17 @@
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+.temp/
+
+# Large model files (link to external storage instead)
+*.bin
+*.pth
+*.h5
+*.hdf5
