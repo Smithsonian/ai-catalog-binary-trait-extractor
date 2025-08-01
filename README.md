@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/madaime2/ai-catalog-binary-trait-extractor/blob/main/assets/images/Example_Dichotomous_Key_Pedicularis.png?raw=true" alt="Example Dichotomous Key" width="600"/>
+</p>
+
 # Binary Trait Extractor for Pedicularis
 
 This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. Although this pipeline is designed for Pedicularis, its prompt-based approach makes it easily adaptable to other plant clades or non-plant groups with comparabale documentation.
