@@ -46,17 +46,19 @@ This repository documents a pipeline for extracting structured morphological tra
 
 ```
 ai-catalog-binary-trait-extractor/
-├── README.md                    # Main model documentation (use template below)
-├── LICENSE                      # Model licensing information
-├── CHANGELOG.md                # Version history
-├── docs/                       # Additional documentation
-│   ├── user-guide.md          # How to use the model
-│   └── technical-specs.md     # Additional technical details
-├── examples/                   # Usage examples
-│   └── notebooks/             # Jupyter notebooks (optional)
-└── assets/                     # Supporting files
-    ├── images/                # Screenshots, diagrams
-    └── sample-data/           # Small sample datasets
+├── README.md                            # Main model documentation
+├── LICENSE                              # Model licensing information (MIT)
+├── CHANGELOG.md                         # Version history and update log
+├── .gitignore
+├── examples/                            # Usage examples
+│   ├── Trait_extraction_pipeline.ipynb  # Trait extraction pipeline and visualizations
+│   └── Trait_extraction_pipeline.py     # Python script version of pipeline                             
+├── docs/                                # Additional documentation
+│   ├── user-guide.md                    # How to use the model
+│   └── technical-specs.md               # Technical specifications and reproducibility
+└── assets/                              # Supporting files
+    ├── images/                          # Example visualizations (e.g., Dichotomous key, UMAP)
+    └── Data/                            # Datasets
 ```
 ## README.md Template
 
