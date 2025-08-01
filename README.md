@@ -24,7 +24,7 @@ This repository documents a pipeline for extracting structured morphological tra
  - MIT License
 
 ### CHANGELOG.md
- - Verion history and update log
+ - Version history and update log
 
 ## Setup Guide
 
