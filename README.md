@@ -107,7 +107,7 @@ ai-catalog-model-name/
 
 ### Primary Intended Uses
 - Extracting binary, numeric, and categorical morphological, life history, and physiological traits from botanical species descriptions using large language models
-- Generating structured trait matrices for downstream analyses such as trait uniqueness evaluation, trait-based clustering, and dichotomous key construction
+- Generating structured trait matrices for downstream analyses such as trait uniqueness evaluation, trait-based clustering (using ordination methods), and dichotomous key construction
 
 ### Out-of-Scope Uses
 - Extraction of traits from poorly formatted textual sources
@@ -124,14 +124,14 @@ This model supports biodiversity and conservation research aligned with the Smit
 ## 3. Technical Specifications
 
 ### Algorithm and Architecture
-- **Algorithm**: [Type of algorithm used - neural network, decision tree, etc.]
-- **Architecture**: [Details about the model's architecture]
-- **Model Size**: [Number of parameters, model weights size]
+- **Algorithm**: Prompt-based extraction using large language models (LLMs)
+- **Architecture**: API calls to GPT-3.5 using structured JSON prompts and validation logic
+- **Model Size**: Not applicable (model is externally hosted by OpenAI)
 
 ### Input/Output Requirements
-- **Input Requirements**: [Expected input formats and constraints]
-- **Output Format**: [Description of model outputs and formats]
-- **Hardware Requirements**: [Computing resources needed for operation]
+- **Input Requirements**: Cleaned species descriptions in plain text or CSV format, consisting of English-language morphological descriptions
+- **Output Format**: Structured JSON or CSV files representing trait matrices, encoding binary/numeric/categorical traits by species
+- **Hardware Requirements**: Minimal for local usage (CPU); requires internet access and OpenAI API key
 
 ## 4. Training Information
 
