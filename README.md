@@ -178,9 +178,9 @@ Not applicable (no personal attributes involved)
 - Tqdm
 
 ### Resource Requirements
-- **Compute**: [CPU/GPU requirements]
-- **Memory**: [RAM requirements]
-- **Storage**: [Storage needs]
+- **Compute**: CPU sufficient; No GPU required
+- **Memory**: ≥4 GB RAM recommended for processing large datasets
+- **Storage**: < 500 MB for output files (JSON/CSV); more if processing additional species
 
 ### Integration Points
 - Can be integrated with downstream ecological and evolutionary analysis pipelines
