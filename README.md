@@ -2,9 +2,9 @@
   <img src="https://github.com/madaime2/ai-catalog-binary-trait-extractor/blob/main/assets/images/Example_Dichotomous_Key_Pedicularis.png?raw=true" alt="Example Dichotomous Key" width="700"/>
 </p>
 
-# Binary Trait Extractor for Pedicularis
+# Binary Trait Extractor for _Pedicularis_
 
-This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. Although this pipeline is designed for Pedicularis, its prompt-based approach makes it easily adaptable to other plant clades or non-plant groups with comparabale documentation.
+This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. Although this pipeline is designed for _Pedicularis_, its prompt-based approach makes it easily adaptable to other plant clades or non-plant groups with comparabale documentation.
 
 ## How to Use This Repository
 
@@ -69,11 +69,11 @@ ai-catalog-binary-trait-extractor/
 *Copy this template and fill in the information to the best of your ability. Keep in mind, certain sections may not be appropriate to your use case.*
 
 
-# Smithsonian AI Model Catalog Entry: Binary Trait Extractor for Pedicularis
+# Smithsonian AI Model Catalog Entry: Binary Trait Extractor for _Pedicularis_
 
 ## 1. Model Information
 
-- **Model Name**: Binary Trait Extractor for Pedicularis
+- **Model Name**: Binary Trait Extractor for _Pedicularis_
 - **Version**: v1.0.0
 - **Description**: This tool uses a large language model (e.g., OpenAI GPT-3.5) to extract standardized morphological traits from botanical species descriptions (i.e. taxonomic treatments). It encodes binary, numeric, and categorical traits into structured matrices that subsequently enable trait-based diversity analysis, detection of unique character combinations, and generation of dichotomous keys. 
 - **Type**: LLM-based text-to-structure pipeline
@@ -81,7 +81,7 @@ ai-catalog-binary-trait-extractor/
 - **Developer/Owner**: (Marc-Elie Adaime (Smithsonian Data Science Lab)
 
 ### Quick Stats
-- **Total Parameters**: Not Applicable (uses OpenAI GPT-3.5 via API)
+- **Total Parameters**: Not Applicable (uses OpenAI GPT-3.5 _via_ API)
 - **Training Dataset Size**: Not Applicable (model is pre-trained)
 - **Primary Metric**: Manual trait extraction accuracy: XX% (estimated based on validation of output against expert-annotated traits)
 - **Last Updated**: 2025-07-25
@@ -129,17 +129,14 @@ This model supports biodiversity and conservation research aligned with the Smit
 - **Data Preprocessing**: Standardize parsing and formatting of botanical species descriptions before sending to API
 
 ### Training Procedure
-- **Methodology**: No local training; inference-only pipeline via prompt engineering
+- **Methodology**: No local training; inference-only pipeline _via_ prompt engineering
 - **Training Infrastructure**: Not applicable
   
 ## 5. Performance Metrics
- 
-| Metric | Value | Test Dataset | Notes |
-|--------|--------|--------------|-------|
-| Accuracy | [%] | [Dataset name] | [Context or conditions] |
-| Precision | [%] | [Dataset name] | [For classification tasks] |
-| Recall | [%] | [Dataset name] | [For classification tasks] |
-| [Custom Metric] | [Value] | [Dataset name] | [Domain-specific metrics] |
+While accuracy, precision, and recall are standard metrics in AI model evaluation, we have not yet formally assessed these in the context of this trait extraction pipeline. In our case, performance should ultimately be evaluated based on the following: 
+- Accuracy of trait extraction, by comparing LLM-derived traits against expert-annotated descriptions and curated character matrices
+- Effectiveness of species discrimination, and the construction of a valid dichotomous key for identifying species (here, within _Pedicularis_)
+- Diversity quantification, by evaluating whether the encoded trait matrix captures meaningful variation within the clade (e.g., _via_ clustering or ordination) and reflects ecological and evolutionary patterns
 
 ### Benchmark Comparisons
 No formal benchmark comparison yet; accuracy evaluated through manual revision 
@@ -208,7 +205,7 @@ This model is released under [LICENSE NAME]. See [LICENSE](LICENSE) for details.
 ### Required Citations
 ```bibtex
 @misc{[binary_trait_extractor],
-  title={[Binary Trait Extractor for Pedicularis]},
+  title={[Binary Trait Extractor for _Pedicularis_]},
   author={[Marc-Elie Adaime]},
   year={[2025]},
   url={[https://github.com/madaime2/ai-catalog-binary-trait-extractor]}
@@ -260,7 +257,7 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ### Code Repository
 - **Main Repository**: https://github.com/madaime2/ai-catalog-binary-trait-extractor
-- **Training Code**: Not applicable - uses OpenAI LLMs via API without fine-tuning
+- **Training Code**: Not applicable - uses OpenAI LLMs _via_ API without fine-tuning
 
 ### Reproduction Steps
 See [Reproducibility Guide](docs/technical-specs.md) for detailed instructions, including:
@@ -270,7 +267,7 @@ See [Reproducibility Guide](docs/technical-specs.md) for detailed instructions, 
 - How to perform various analyses, including diversity quantification 
 
 ### Seeds and Constants
-N/A - No random seed control available via OpenAI's API. However, deterministic mode (temperature = 0) is used to ensure repeatability. 
+N/A - No random seed control available _via_ OpenAI's API. However, deterministic mode (temperature = 0) is used to ensure repeatability. 
 
 ### Validation Approach
 Manual comparison of extract traits against-expert annotated descriptions for a subset of species.
