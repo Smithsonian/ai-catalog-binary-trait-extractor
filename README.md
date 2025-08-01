@@ -1,6 +1,6 @@
 # Binary Trait Extractor for Pedicularis
 
-This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. 
+This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. Although this pipeline is designed for Pedicularis, its prompt-based approach makes it easily adaptable to other plant clades or non-plant groups with comparabale documentation.
 
 ## How to Use This Repository
 
