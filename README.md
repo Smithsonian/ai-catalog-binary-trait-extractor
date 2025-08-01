@@ -95,7 +95,7 @@ ai-catalog-model-name/
 ### Quick Stats
 - **Total Parameters**: Not Applicable (uses OpenAI GPT-3.5 via API)
 - **Training Dataset Size**: Not Applicable (model is pre-trained)
-- **Primary Metric**: Manual trait extraction accuracy: ~90% (estimated based on validation of output against expert-annotated traits)
+- **Primary Metric**: Manual trait extraction accuracy: XX% (estimated based on validation of output against expert-annotated traits)
 - **Last Updated**: 2025-07-25
 
 ### Related Resources
@@ -106,19 +106,20 @@ ai-catalog-model-name/
 ## 2. Intended Uses and Limitations
 
 ### Primary Intended Uses
-- [Specific use case the model was designed for]
-- [Additional intended use case]
-
+- Extracting binary, numeric, and categorical morphological, life history, and physiological traits from botanical species descriptions using large language models
+- Generating structured trait matrices for downstream analyses such as trait uniqueness evaluation, trait-based clustering, and dichotomous key construction
 
 ### Out-of-Scope Uses
-- [Use case explicitly NOT recommended]
-
+- Extraction of traits from poorly formatted textual sources
+- Use as a substitute for expert taxonomic validation without post-processing
 
 ### Known Limitations
-- [Key limitation users should be aware of]
+- Reliance on the consistency and certainty of species descriptions; results may vary with ambiguous or uncertain descriptions, as well as with highly unstructured texts
+- Trait extraction depends on prompt sensitivity and the behavior of the selected LLM (e.g., OpenAI)
+- The pipeline lacks confidence or uncertainty quantification in its current form
 
 ### Institutional Context
-[How this model aligns with institutional needs and mission]
+This model supports biodiversity and conservation research aligned with the Smithsonian's mission to advance understanding of natural history and evolution. It helps researchers standardize phenotypic data for a broad range of ecological and evolutionary studies.
 
 ## 3. Technical Specifications
 
@@ -135,14 +136,14 @@ ai-catalog-model-name/
 ## 4. Training Information
 
 ### Training Data
-- **Sources**: [Training data sources and composition]
-- **Dataset Size**: [Number of examples/records]
-- **Data Preprocessing**: [Steps taken to prepare training data]
+- **Sources**: None used locally; the LLM is pre-trained on a wide corpus including scientific literature relevant to botanical descriptions
+- **Dataset Size**: 352 species from the Flora of China; 45 traits 
+- **Data Preprocessing**: Standardize parsing and formatting of botanical species descriptions before sending to API
 
 ### Training Procedure
-- **Methodology**: [Training approach and hyperparameters]
-- **Training Infrastructure**: [Computing resources]
-
+- **Methodology**: No local training; inference-only pipeline via prompt engineering
+- **Training Infrastructure**: Not applicable
+  
 ## 5. Performance Metrics
  
 | Metric | Value | Test Dataset | Notes |
@@ -153,29 +154,35 @@ ai-catalog-model-name/
 | [Custom Metric] | [Value] | [Dataset name] | [Domain-specific metrics] |
 
 ### Benchmark Comparisons
-[Performance against standard benchmarks in the domain]
+No formal benchmark comparison yet; accuracy evaluated through manual revision 
 
 ## 6. Bias and Fairness Assessment
 
 ### Bias Impact Analysis
-[Performance variation across different groups or classes in the model]
+Bias may result from inconsistencies in species descriptions or biases associated with the language model itself 
 
 ### Bias Mitigations
-[Steps taken to address identified biases]
-
+- Use highly structured prompts and validation schemes
+- Manual review of extracted traits and expert consultation when needed
+  
 ### Remaining Concerns
-[Acknowledged limitations in bias mitigation]
+Potential inconsistent performance across clades with highly variable taxonomic descriptions
 
 ### Protected Attributes
-[How the model handles sensitive characteristics]
+Not applicable (no personal attributes involved)
 
 ## 7. Operational Details
 
 ### Deployment Environment
-[Where the model is deployed - cloud, on-premises, etc.]
+- Local Python environment (Jupyter notebook / script)
+- Requires access to OpenAI API (e.g., GPT-3.5)
 
 ### Dependencies
-[Software or hardware dependencies required]
+- Python 3.8+
+- OpenAI
+- Pandas
+- Numpy
+- Tqdm
 
 ### Resource Requirements
 - **Compute**: [CPU/GPU requirements]
@@ -183,21 +190,21 @@ ai-catalog-model-name/
 - **Storage**: [Storage needs]
 
 ### Integration Points
-[How the model connects to other systems]
+- Can be integrated with downstream ecological and evolutionary analysis pipelines
 
 ### Monitoring Framework
-[How the model is monitored in production]
+- Manual run and review; no continuous monitoring currently
 
 ## 8. Governance and Compliance
 
 ### Ethical Considerations
-[Documentation of ethical implications and mitigations]
+- Pipeline does not involve sensitive data
 
 ### Risk Assessment
-[Evaluation of potential risks with the model's use]
+- Minimal risks associated with incorrect trait extraction; downstream analyses should involved expert review
 
 ### User Access Controls
-[Authorization framework for model access]
+- Users must supply their own OpenAI API key (if using an OpenAI model)
 
 ### Governance Framework
 [Oversight mechanisms and responsible parties]
@@ -212,19 +219,20 @@ This model is released under [LICENSE NAME]. See [LICENSE](LICENSE) for details.
 
 ### Required Citations
 ```bibtex
-@misc{[citation_key],
-  title={[Model Title]},
-  author={[Author Names]},
-  year={[Year]},
-  url={[Repository URL]}
+@misc{[binary_trait_extractor],
+  title={[Binary Trait Extractor for Pedicularis]},
+  author={[Marc-Elie Adaime]},
+  year={[2025]},
+  url={[https://github.com/madaime2/ai-catalog-binary-trait-extractor]}
 }
 ```
 
 ### Intellectual Property Status
-[IP ownership and restrictions]
+The code and prompt are original and developed by the author; no proprietary components included
 
 ### Third-Party Components
-[Any licensed components incorporated]
+- OpenAI GPT-3.5
+- Python open-source libraries
 
 ## 10. User Resources
 
@@ -236,11 +244,12 @@ See [User Guide](docs/user-guide.md) for detailed instructions.
 - [Jupyter notebooks](examples/notebooks/)
 
 ### Known Issues
-[Currently identified issues or bugs]
+- Occasional LLM hallucinations and inconsistencies in trait extraction
+- Some rare traits may be missed without proper prompt engineering
 
 ### Support Contacts
-- **Technical Support**: [Contact information]
-- **Model Maintainer**: [Responsible party contact]
+- **Technical Support**: adaimem@si.edu
+- **Model Maintainer**: Marc-Elie Adaime
 
 ## 11. Maintenance and Updates
 
