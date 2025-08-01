@@ -189,7 +189,7 @@ Not applicable (no personal attributes involved)
 - Users must supply their own OpenAI API key (if using an OpenAI model)
 
 ### Governance Framework
-[Oversight mechanisms and responsible parties]
+Oversight is provided by the pipeline developer, Marc-Elie Adaime, who is responsible for updating the code and documentation. 
 
 ## 9. Licenses and Attribution
 
