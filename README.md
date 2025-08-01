@@ -31,13 +31,10 @@ This repository documents a pipeline for extracting structured morphological tra
 4. **Follow instructions in user guide**
 
 ### Customization Checklist
-- [ ] Rename repository to `ai-catalog-[model_name]`
-- [ ] Update README.md title and all placeholders
-- [ ] Complete documentation sections to the best of your ability
-- [ ] Add usage examples if any
-- [ ] Set appropriate license
-- [ ] Add contact information
-- [ ] Create initial CHANGELOG.md entry
+- [ ] Update README.md and metadata fields
+- [ ] Adjust prompt and schema for target clade and trait set
+- [ ] Add or modify usage examples
+- [ ] Log changes in CHANGELOG.md
 
 ### Tips
 - **Use consistent, structured input for better extraction accuracy**
@@ -48,7 +45,7 @@ This repository documents a pipeline for extracting structured morphological tra
 ## Repository Directory Structure
 
 ```
-ai-catalog-model-name/
+ai-catalog-binary-trait-extractor/
 ├── README.md                    # Main model documentation (use template below)
 ├── LICENSE                      # Model licensing information
 ├── CHANGELOG.md                # Version history
