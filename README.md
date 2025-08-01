@@ -11,32 +11,24 @@ This repository documents a pipeline for extracting structured morphological tra
 4. Run the extraction pipelne (scripts and notebooks in examples)
 5. Load the structured outputs in CSV or JSON format for subsequent ecological and evolutionary analyses 
 
-### How to Rename Your Repository
-After creating from template:
-1. Go to your repository **Settings** tab on GitHub
-2. Scroll to **"Repository name"** section
-3. Change name to: `ai-catalog-[your_model_name]`
-4. Click **"Rename"** button
-5. Update the title in README.md to match
-
 ## Files Included
 
 ### README.md
- - Complete template for Smithsonian AI Model Catalog standards. This file serves as the main documentation for your AI model. Fill in the sections with relevant information about your model, including its purpose, performance metrics, intended uses, and technical specifications.
+ - Core documentation describing model scope, usage, and metadata (Smithsonian AI Model Catalog Standard)
 
 ### LICENSE
- - Choose appropriate license for your model and documentation
+ - MIT License
 
 ### CHANGELOG.md
- - Template for tracking version changes
+ - Verion history and update log
 
 ## Setup Guide
 
 ### Initial Setup
-1. **Create from template** - Use GitHub's "Use this template" button
-2. **Rename repository** to `ai-catalog-[your_model_name]`
-3. **Clone to your computer**
-4. **Complete documentation**
+1. **Clone the repository** 
+2. **Set up a Python environment and install dependencies**
+3. **Format species descriptions (see examples in sample-data)**
+4. **Follow instructions in user guide**
 
 ### Customization Checklist
 - [ ] Rename repository to `ai-catalog-[model_name]`
