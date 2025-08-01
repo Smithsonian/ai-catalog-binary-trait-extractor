@@ -5,18 +5,11 @@ This repository documents a pipeline for extracting structured morphological tra
 ## How to Use This Repository
 
 ### Quick Start
-1. **Click "Use this template"** on GitHub to create your own repository
-2. **Rename your repository** to `ai-catalog-[your_model_name]`
-   - Example: `ai-catalog-fern-classifier` or `ai-catalog-canopy-segmentation`
-   - Avoid generic names like `ai-catalog-my-model`
-   - Use specific names that reflect the model's purpose or domain
-   - This helps with organization and searchability in the catalog
-   - **Important**: Do not include spaces or special characters in the name
-   - Use hyphens to separate words for readability
-3. **Clone your repository** to your computer
-4. **Fill out the README.md** with your model's information
-5. **Complete the model card** in the docs folder
-6. **Commit and push** your changes
+1. Clone or fork this repository to access the AI-based trait extraction pipeline
+2. Install required dependencies listed in requirements.txt or the user guide
+3. Prepare the input data: species descriptions in plain text or CSV format
+4. Run the extraction pipelne (scripts and notebooks in examples)
+5. Load the structured outputs in CSV or JSON format for subsequent ecological and evolutionary analyses 
 
 ### How to Rename Your Repository
 After creating from template:
@@ -55,10 +48,10 @@ After creating from template:
 - [ ] Create initial CHANGELOG.md entry
 
 ### Tips
-- **Use specific names**: `ai-catalog-bert-medical-ner` not `ai-catalog-my-model`
-- **Keep it simple**: Focus on documentation, not complex infrastructure
-- **Update regularly**: Keep performance metrics and version info current
-- **Link to evaluation**: Reference your `ai-eval-[model_name]` repository if you have one
+- **Use consistent, structured input for better extraction accuracy**
+- **Document trait definitions and prompt formats**
+- **Update regularly**
+- **Share modified pipeline by linking to this repository or citing it**
 
 ## Repository Directory Structure
 
