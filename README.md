@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/madaime2/ai-catalog-binary-trait-extractor/blob/main/assets/images/Example_Dichotomous_Key_Pedicularis.png?raw=true" alt="Example Dichotomous Key" width="600"/>
+  <img src="https://github.com/madaime2/ai-catalog-binary-trait-extractor/blob/main/assets/images/Example_Dichotomous_Key_Pedicularis.png?raw=true" alt="Example Dichotomous Key" width="700"/>
 </p>
 
 # Binary Trait Extractor for Pedicularis
