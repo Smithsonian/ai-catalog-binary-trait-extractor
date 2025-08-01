@@ -1,8 +1,8 @@
-# AI Model Catalog Repository Template
+# Binary Trait Extractor for Pedicularis
 
-This is a template for documenting and cataloging AI model metadata according to the recommendations in Smithsonian's AI Handbook.
+This repository documents a pipeline for extracting structured morphological traits from botanical species descriptions using large language models. It follows the Smithsonian AI Model Catalog format. 
 
-## How to Use This Template
+## How to Use This Repository
 
 ### Quick Start
 1. **Click "Use this template"** on GitHub to create your own repository
@@ -81,22 +81,22 @@ ai-catalog-model-name/
 *Copy this template and fill in the information to the best of your ability. Keep in mind, certain sections may not be appropriate to your use case.*
 
 
-# Smithsonian AI Model Catalog Entry: [Model Name]
+# Smithsonian AI Model Catalog Entry: Binary Trait Extractor for Pedicularis
 
 ## 1. Model Information
 
-- **Model Name**: [Unique identifier or name of the AI model]
-- **Version**: [Version number to track updates and changes]
-- **Description**: [Brief overview of the model's purpose and functionality]
-- **Type**: [Classification: LLM, vision model, multimodal, etc.]
-- **Release Date**: [When this version was released]
-- **Developer/Owner**: [Individual or team responsible for the model]
+- **Model Name**: Binary Trait Extractor for Pedicularis
+- **Version**: v1.0.0
+- **Description**: This tool uses a large language model (e.g., OpenAI GPT-3.5) to extract standardized morphological traits from botanical species descriptions (i.e. taxonomic treatments). It encodes binary, numeric, and categorical traits into structured matrices that subsequently enable trait-based diversity analysis, detection of unique character combinations, and generation of dichotomous keys. 
+- **Type**: LLM-based text-to-structure pipeline
+- **Release Date**: 2025-07-24
+- **Developer/Owner**: (Marc-Elie Adaime (Smithsonian Data Science Lab)
 
 ### Quick Stats
-- **Total Parameters**: [Number]
-- **Training Dataset Size**: [Size]
-- **Primary Metric**: [Metric]: [Value]
-- **Last Updated**: [Date]
+- **Total Parameters**: Not Applicable (uses OpenAI GPT-3.5 via API)
+- **Training Dataset Size**: Not Applicable (model is pre-trained)
+- **Primary Metric**: Manual trait extraction accuracy: ~90% (estimated based on validation of output against expert-annotated traits)
+- **Last Updated**: 2025-07-25
 
 ### Related Resources
 - **Evaluation Repository**: [Link to ai-eval-model_name if exists]
@@ -245,16 +245,16 @@ See [User Guide](docs/user-guide.md) for detailed instructions.
 ## 11. Maintenance and Updates
 
 ### Maintenance Plan
-[How the model will be maintained]
+This pipeline will be maintained through periodic updates to the codebase, prompt templates, and trait selection. Future improvements may include adopting different LLMs, expanding the trait list, and designing and running further analyses.  
 
 ### Responsible Parties
-[Who maintains the model]
+Marc-Elie Adaime
 
 ### Update Frequency
-[Expected cadence of updates]
+When necessary, particularly when user feedback is incoporated. 
 
 ### Retraining Criteria
-[Conditions that would trigger retraining]
+Not applicable - the system relies on pre-trained LLMs (e.g., OpenAI GPT-3.5) and prompt engineering. Retraining is not currently part of the architecture/pipeline. 
 
 ### Version History
 See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
@@ -262,18 +262,21 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 ## 12. Reproducibility Information
 
 ### Code Repository
-- **Main Repository**: [This repository URL]
-- **Training Code**: [Link to training code if separate]
+- **Main Repository**: https://github.com/madaime2/ai-catalog-binary-trait-extractor
+- **Training Code**: Not applicable - uses OpenAI LLMs via API without fine-tuning
 
 ### Reproduction Steps
-See [Reproducibility Guide](docs/technical-specs.md) for detailed instructions.
+See [Reproducibility Guide](docs/technical-specs.md) for detailed instructions, including:
+- How to extract and load species descriptions
+- How to format trait extraction prompts
+- How to run the extraction pipeline and store outputs
+- How to perform various analyses, including diversity quantification 
 
 ### Seeds and Constants
-[Random seeds and fixed parameters used]
+N/A - No random seed control available via OpenAI's API. However, deterministic mode (temperature = 0) is used to ensure repeatability. 
 
 ### Validation Approach
-[How results were validated]
+Manual comparison of extract traits against-expert annotated descriptions for a subset of species.
 
 ### Institutional Review
-[Details of any internal review process completed]
-
+No formal review yet. This tool is under independent development. 
